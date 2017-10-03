@@ -3,10 +3,12 @@
 	margin:20px;
 	background-color:black;
 }
-.blue{
+.color1{
 	color:#3a738b;
 }
-
+.bgcolor1{
+	background-color:#C9C9C9;
+}
 body 
 {
 	margin-left:20px;
