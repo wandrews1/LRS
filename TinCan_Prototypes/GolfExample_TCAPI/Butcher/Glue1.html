@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Making a Butcher Block</title>
+    <style type="text/css" media="screen">
+        @import url( ../css/style.css );
+    </style>
+    <script src="../scripts/TinCanJS/build/tincan-min.js" type="text/javascript"></script>
+    <script src="../scripts/common.js" type="text/javascript"></script>
+    <script src="../scripts/contentfunctions.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var tincan = new TinCan (
+            {
+                url: window.location.href,
+                activity: {
+                    id: GolfExample.CourseActivity.id + "/Butcher/Glue1",
+                    definition: {
+                        name: {
+                            "en-US": "Making a Butcher Block"
+                        },
+                        description: {
+                            "en-US": "An overview of making a Butcher Block"
+                        }, 
+                        type: "http://activitystrea.ms/schema/1.0/page"
+                    }
+                }
+            }
+        );
+
+        tincan.sendStatement(
+            {
+                verb: {
+                    id: "http://adlnet.gov/expapi/verbs/experienced",
+                    display: {
+                        "en-US" : "experienced"
+                    }
+                },
+                context: GolfExample.getContext(
+                    GolfExample.CourseActivity.id
+                )
+            },
+            function () {}
+        );
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+
+
+
+
+
+<div class="container-fluid" style="background: #C9C9C9;">
+
+<center>
+    <div class="card" style="width: 60rem;">
+        <h1 class="card-header">Glue-Up 1</h1>
+        <div class="card-body">
+            
+            <h3 class="card-title">Turn Blocks on Side</h3>
+            <center><img src="6.gif"/></center>
+            <p>Turn all the strips on their sides, except for the last one. This is the end peice, so it's not going to get any glue.</p>
+
+            <h3 class="card-title">Pour Glue</h3>
+            <center><img src="7.gif"/></center>
+            <p>Pour the glue on all the peices you turned on their side. Don't be frugal. Here, I am using Titebond III because it is waterproof.</p>
+
+            <h3 class="card-title">Spread Glue</h3>
+            <center><img src="8.gif"/></center>
+            <p>Spread the glue evenly. Wood glue works best when applied in thin lines. I have a Rockler Glue Spreader and it spreads the glue into lines perfectly. If you don't have a brush, you can easily use your hand. The glue will easily peel off, harmlessly.</p>
+
+            <h3 class="card-title">Turn Blocks Back on Bottom</h3>
+            <center><img src="9.gif"/></center>
+            <p>Turn the strips back on their bottoms and press them against one another. Make sure the edges line up to minimize size loss in later steps.</p>
+
+            <h3 class="card-title">Clamps</h3>
+            <center><img src="10.gif"/></center>
+            <p>Apply two heavy-duty grade clamps. I prefer to use clamps that exceed 1000 lbs of force. This ensures a tight bond. Before you tighten all the way, make sure all edges are properly aligned. This will be your last chance to ensure this.</p>
+
+            <h3 class="card-title">More Clamps</h3>
+            <center><img src="11.gif"/></center>
+            <p>After everything is properly aligned, add more clamps. The more the better. Wait at least 6 hours before taking the clamps off.</p>
+
+            
+
+        </div>
+    </div>   
+</center>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+</html>

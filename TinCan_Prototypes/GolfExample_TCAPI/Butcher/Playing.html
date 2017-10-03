@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Playing Golf</title>
+    <style type="text/css" media="screen">
+        @import url( ../css/style.css );
+    </style>
+    <script src="../scripts/TinCanJS/build/tincan-min.js" type="text/javascript"></script>
+    <script src="../scripts/common.js" type="text/javascript"></script>
+    <script src="../scripts/contentfunctions.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var tincan = new TinCan (
+            {
+                url: window.location.href,
+                activity: {
+                    id: GolfExample.CourseActivity.id + "/Butcher/Purchase",
+                    definition: {
+                        name: {
+                            "en-US": "Making a Butcher Block"
+                        },
+                        description: {
+                            "en-US": "An overview of making a Butcher Block"
+                        }, 
+                        type: "http://activitystrea.ms/schema/1.0/page"
+                    }
+                }
+            }
+        );
+
+        tincan.sendStatement(
+            {
+                verb: {
+                    id: "http://adlnet.gov/expapi/verbs/experienced",
+                    display: {
+                        "en-US" : "experienced"
+                    }
+                },
+                context: GolfExample.getContext(
+                    GolfExample.CourseActivity.id
+                )
+            },
+            function () {}
+        );
+    </script>
+</head>
+<body>
+<h1>Butcher Blocks</h1>
+<img src="29.gif"/>
+<p> For a little bit of history, the use of a butcher block first originated in China, though Europeans have used butcher blocks for centuries as well. The concept was to have a sturdy base on which to butcher meat, hence, the "butcher block". The physical act of chopping is also why these blocks are also commonly called chopping block as well.</p>
+
+<p>In the past, just about anything could pass for a block, be it a tree stump, log round or even a flat rock (though we imagine that idea didn't last long due to the damage to the knives). These days, butcher blocks are be described as anything from a round 5" wood board to a stand alone table to a 20 square foot kitchen island. No wonder there's some confusion as to the technical definition of a butcher block, because the reality is that the definition is in the eye of the beholder and you can see our butcher blocks in varying shapes and sizes. </p>
+
+<script type="text/javascript">
+AddLicenseInfo("CuttingBoard.com", "https://www.cuttingboard.com/blog/butcher-blocks-vs-cutting-boards-whats-the-difference/");
+AddTagLine();
+</script>
+</body>
+</html>
