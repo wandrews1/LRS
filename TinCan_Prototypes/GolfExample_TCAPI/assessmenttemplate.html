@@ -266,10 +266,10 @@
 
                 resultsSummary += "<div class='questionResult'><h3>Question " + i + "</h3>";
                 if (wasCorrect) {
-                    resultsSummary += "<em><div class='alert alert-success' role='alert'>Correct</div></em><br>"
+                    resultsSummary += "<div class='alert alert-success' role='alert'><em class='alert-heading'>Correct</em></div><br>"
                 }
                 else{
-                    resultsSummary += "<em><div class='alert alert-success' role='alert'>Incorrect</em><br>"
+                    resultsSummary += "<div class='alert alert-danger' role='alert'><em class='alert-heading'>Incorrect</em><br>"
                     resultsSummary += "<p>Your answer: " + learnerResponse + "</p><hr>"
                     resultsSummary += "<p>Correct answer: " + correctAnswer + "</p></div>"
                 }
@@ -352,6 +352,8 @@
     </script>
     <script src="Butcher/questions.js"></script>
     <script src="scripts/contentfunctions.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/    Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
 
 <body>
