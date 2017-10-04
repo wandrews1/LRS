@@ -294,12 +294,13 @@
         }
 
         function RenderTest(test){
+
            document.write ("<div id='test'><form class='container-fluid' id='frmTest' action='#'>");
 
             for (var i in test.Questions){
                 var question = test.Questions[i];
 
-                document.write ("<div class='form-group' id='question_" + question.Id + "' class='question'>");
+                document.write ("<div class='card' style='width: 40rem;'><div class='card-body'><div class='form-group' id='question_" + question.Id + "' class='question'>");
                 document.write (question.Text);
 
                 switch (question.Type){
@@ -338,7 +339,7 @@
 
                     case QUESTION_TYPE_NUMERIC:
                         document.write("<div class='correctAnswer'><input class='form-control' type='text' value='' id='question_" + question.Id + "_Text' onchange='CheckNumeric(this)'/> (");
-                        document.write(question.CorrectAnswer + ")</div>");
+                        document.write(question.CorrectAnswer + ")</div></div></div>");
                     break;
 
                     default:
