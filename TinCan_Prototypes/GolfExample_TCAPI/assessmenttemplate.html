@@ -266,12 +266,12 @@
 
                 resultsSummary += "<div class='questionResult'><h3>Question " + i + "</h3>";
                 if (wasCorrect) {
-                    resultsSummary += "<em>Correct</em><br>"
+                    resultsSummary += "<em><div class='alert alert-success' role='alert'>Correct</div></em><br>"
                 }
                 else{
-                    resultsSummary += "<em>Incorrect</em><br>"
-                    resultsSummary += "Your answer: " + learnerResponse + "<br>"
-                    resultsSummary += "Correct answer: " + correctAnswer + "<br>"
+                    resultsSummary += "<em><div class='alert alert-success' role='alert'>Incorrect</em><br>"
+                    resultsSummary += "<p>Your answer: " + learnerResponse + "</p><hr>"
+                    resultsSummary += "<p>Correct answer: " + correctAnswer + "</p></div>"
                 }
                 resultsSummary += "</div>";
             }
