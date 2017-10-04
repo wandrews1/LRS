@@ -266,12 +266,12 @@
 
                 resultsSummary += "<div class='questionResult'><h3>Question " + i + "</h3>";
                 if (wasCorrect) {
-                    resultsSummary += "<div class='alert alert-success' role='alert'><em class='alert-heading'>Correct</em></div><br>"
+                    resultsSummary += "<div class='alert alert-success' role='alert'><h6 class='alert-heading'>Correct</h6></div><br>"
                 }
                 else{
-                    resultsSummary += "<div class='alert alert-danger' role='alert'><em class='alert-heading'>Incorrect</em><br>"
+                    resultsSummary += "<div class='alert alert-danger' role='alert'><h6 class='alert-heading'>Incorrect</h6><br>"
                     resultsSummary += "<p>Your answer: " + learnerResponse + "</p><hr>"
-                    resultsSummary += "<p>Correct answer: " + correctAnswer + "</p></div>"
+                    resultsSummary += "<p class='mb-0'>Correct answer: " + correctAnswer + "</p></div>"
                 }
                 resultsSummary += "</div>";
             }
@@ -293,12 +293,12 @@
         }
 
         function RenderTest(test){
-            document.write ("<div id='test'><form id='frmTest' action='#'>");
+            document.write ("<div id='test'><form class='container' id='frmTest' action='#'>");
 
             for (var i in test.Questions){
                 var question = test.Questions[i];
 
-                document.write ("<div id='question_" + question.Id + "' class='question'>");
+                document.write ("<div class='form-group' id='question_" + question.Id + "' class='question'>");
                 document.write (question.Text);
 
                 switch (question.Type){
@@ -316,7 +316,7 @@
                                 document.write("class='answer'");
                             }
 
-                            document.write("><input type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_" + ansIndex + "'/>" + answer + "</div>");
+                            document.write("><input class='form-control' type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_" + ansIndex + "'/>" + answer + "</div>");
 
                             ansIndex++;
                         }
@@ -327,16 +327,16 @@
 
                         document.write("<div ");
                         if (question.CorrectAnswer == true) {document.write("class='correctAnswer'");}else{document.write("class='answer'");}
-                        document.write("><input type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_True'/>True</div>");
+                        document.write("><input class='form-control' type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_True'/>True</div>");
 
                         document.write("<div ");
                         if (question.CorrectAnswer == false) {document.write("class='correctAnswer'");}else{document.write("class='answer'");}
-                        document.write("><input type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_False'/>False</div>");
+                        document.write("><input class='form-control' type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_False'/>False</div>");
 
                     break;
 
                     case QUESTION_TYPE_NUMERIC:
-                        document.write("<div class='correctAnswer'><input type='text' value='' id='question_" + question.Id + "_Text' onchange='CheckNumeric(this)'/> (");
+                        document.write("<div class='correctAnswer'><input class='form-control' type='text' value='' id='question_" + question.Id + "_Text' onchange='CheckNumeric(this)'/> (");
                         document.write(question.CorrectAnswer + ")</div>");
                     break;
 
