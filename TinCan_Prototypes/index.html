@@ -362,14 +362,32 @@
                         <li>Records the learner question responses and overall score from the end of course assessment.(Uses LRS single and multi-statement puts/posts.) </li>
                         <li>Records course completion.(Uses LRS single statement put with score reporting.)</li>
                     </ul>
-                    <span class="warning">WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.</span>
+                    <div class="alert alert-danger" role="alert">
+                      WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
+                    </div>
                     <br>
                     <br>
+
+                    <form class="form-inline">
+                      <label class="sr-only" for="tc_nameInput_golf">Name</label>
+                      <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="tc_nameInput_golf" placeholder="Jane Doe">
+
+                      <label class="sr-only" for="tc_emailInput_golf">Email</label>
+                      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">@</div>
+                        <input type="text" class="form-control" id="tc_emailInput_golf" placeholder="Username">
+                      </div>
+
+                      <button type="submit" class="btn btn-outline-dark" id="golfExampleLaunch" target="_blank" data-baseref="GolfExample_TCAPI/index.html?" href="GolfExample_TCAPI/index.html?">Launch Butcher Block Example</button>
+                    </form>
+
+<!-- 
                     Name: <input type="text" class="form-control" id="tc_nameInput_golf">
                     &nbsp;&nbsp;&nbsp;
                     Email: <input type="text" class="form-control" id="tc_emailInput_golf">
                     <br>
                     <a class="btn btn-outline-dark" id="golfExampleLaunch" target="_blank" data-baseref="GolfExample_TCAPI/index.html?" href="GolfExample_TCAPI/index.html?" >Launch Butcher Block Example</a>
+ -->
                     <br>
                     <br>
                     <hr>
@@ -385,7 +403,9 @@
                         <li>When enabled, reports when a player achieves a top 15 high score.(Uses LRS activity profile puts.)</li>
                         <li>Reports the top 15 high scores achieved by all reporting players.(Uses LRS activity profile gets.)</li>
                     </ul>
-                    <span class="warning">WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.</span>
+                    <div class="alert alert-danger" role="alert">
+                      WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
+                    </div>
                     <br>
                     <br>
                     <a id="jsExampleLaunch" href="" target="_blank" data-baseref="JsTetris_TCAPI/tetris.html?" class="btn btn-outline-dark">Launch Js Tetris</a>
@@ -402,7 +422,9 @@
                         <li>Reports completion to the LRS when a user has visited and saved all of the specified locations in the course. (Uses LRS single statement puts with context.)</li>
                         <li style="{font-weight:bold;}">For testing purposes, this example has a "cheat" such that by pressing '?' on the page, the finder will identify you as being at one of the placemarks. Pressing '?' again will disable this "cheat".</li>
                     </ul>
-                    <span class="warning">WARNING: Name and email will appear in the LRS viewer. Make up names &amp; email if you don't want yours to appear.</span>
+                    <div class="alert alert-danger" role="alert">
+                      WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
+                    </div>
                     <br>
                     <br>
                     If you or somebody using the email address below has already visited all of the locations, be sure to start a <a href="#" class="refreshRegistration">New Registration</a> before launching the activity.</div><br/>

@@ -266,10 +266,10 @@
 
                 resultsSummary += "<div class='questionResult'><h3>Question " + i + "</h3>";
                 if (wasCorrect) {
-                    resultsSummary += "<div class='alert alert-success' role='alert'><h6 class='alert-heading'>Correct</h6></div><br>"
+                    resultsSummary += "<div class='alert alert-success' role='alert'><h6 class='alert-heading'>Correct</h6></div>"
                 }
                 else{
-                    resultsSummary += "<div class='alert alert-danger' role='alert'><h6 class='alert-heading'>Incorrect</h6><br>"
+                    resultsSummary += "<div class='alert alert-danger' role='alert'><h6 class='alert-heading'>Incorrect</h6>"
                     resultsSummary += "<p>Your answer: " + learnerResponse + "</p><hr>"
                     resultsSummary += "<p class='mb-0'>Correct answer: " + correctAnswer + "</p></div>"
                 }
@@ -277,7 +277,7 @@
             }
 
             var score = Math.round(correctCount * 100 / totalQuestions);
-            resultsSummary = "<h3><div class='alert alert-info' role='alert'>Score: " + score + "</div></h3>" + resultsSummary;
+            resultsSummary = "<h2><div class='alert alert-info' role='alert'>Score: " + score + "</div></h2>" + resultsSummary;
             document.getElementById("test").innerHTML = resultsSummary;
 
             var assessmentAttemptDuration = TinCan.Utils.convertMillisecondsToISO8601Duration( Math.abs((new Date()) - assessmentStartTimestamp) ),
@@ -293,7 +293,7 @@
         }
 
         function RenderTest(test){
-            document.write ("<div id='test'><form class='container' id='frmTest' action='#'>");
+            document.write ("<div id='test'><form class='container-fluid' id='frmTest' action='#'>");
 
             for (var i in test.Questions){
                 var question = test.Questions[i];
