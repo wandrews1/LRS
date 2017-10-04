@@ -323,23 +323,27 @@
                 </div>
                 <br class="clear">
 
-                <div class="configInfo infoDiv rounded">
-                    <h4>Prototype Configuration Settings</h4>
-                    <div class="info">
-                        The default prototype settings are as follows.  To change these settings, you must change the values in the config.js file at the top level of this Tin Can Prototypes folder.
-                        <br>
+
+                <div class="card prototypeDiv configInfo infoDiv" style="width: 60rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Prototype Configuration Settings</h4>
+
+                        <div class="info">
+                            The default prototype settings are as follows.  To change these settings, you must change the values in the config.js file at the top level of this Tin Can Prototypes folder.
+                            <br>
+                        </div>
+                        <table class="settings">
+                            <tr><td class="label">endpoint: </td><td><span id="defEndpoint"></span></td></tr>
+                            <tr><td class="label">auth: </td><td><span id="defAuth"></span></td></tr>
+                            <tr><td class="label">Default actor name: </td><td><span id="defActorName"></span></td></tr>
+                            <tr><td class="label">Default actor mbox: </td><td><span id="defActorMbox"></span></td></tr>
+                            <tr><td class="label">Default registration: </td><td><span id="defRegistration"></span></td></tr>
+                        </table>
+                        <div class="info">
+                            To generate and use a new registration UUID, click <a href="#" class="refreshRegistration">New Registration</a> below.  This will cause all of the prototypes to launch as a new attempt rather than using existing State data. Click <a href="#" class="resetRegistration">Reset</a> to reset registration to the original configuration value.
+                        </div>
+                        <a href="#" class="btn btn-outline-danger refreshRegistration">New Registration</a><a href="#" class="btn btn-outline-danger resetRegistration">Reset</a>
                     </div>
-                    <table class="settings">
-                        <tr><td class="label">endpoint: </td><td><span id="defEndpoint"></span></td></tr>
-                        <tr><td class="label">auth: </td><td><span id="defAuth"></span></td></tr>
-                        <tr><td class="label">Default actor name: </td><td><span id="defActorName"></span></td></tr>
-                        <tr><td class="label">Default actor mbox: </td><td><span id="defActorMbox"></span></td></tr>
-                        <tr><td class="label">Default registration: </td><td><span id="defRegistration"></span></td></tr>
-                    </table>
-                    <div class="info">
-                        To generate and use a new registration UUID, click <a href="#" class="refreshRegistration">New Registration</a> below.  This will cause all of the prototypes to launch as a new attempt rather than using existing State data. Click <a href="#" class="resetRegistration">Reset</a> to reset registration to the original configuration value.
-                    </div>
-                    <a href="#" class="btn btn-outline-dark refreshRegistration">New Registration</a><a href="#" class="btn btn-outline-dark resetRegistration">Reset</a>
                 </div>
 
 
