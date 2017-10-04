@@ -313,12 +313,22 @@
                             document.write("<div ");
 
                             if (question.CorrectAnswer == answer) {
-                                document.write("class='correctAnswer'");
+                                document.write("class='correctAnswer'>");
                             } else {
-                                document.write("class='answer'");
+                                document.write("class='answer'>");
                             }
 
-                            document.write("><input class='form-control' type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_" + ansIndex + "'/>" + answer + "</div>");
+                            if (question.CorrectAnswer == answer) {
+                                document.write("<strong>");
+                            }
+
+                            document.write("<input class='form-control' type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_" + ansIndex + "'/>" + answer + "</div>");
+
+                            if (question.CorrectAnswer == answer) {
+                                document.write("</strong></div>");
+                            } else {
+                                document.write("</div>");
+                            }
 
                             ansIndex++;
                         }
@@ -329,7 +339,7 @@
 
                         document.write("<div ");
                         if (question.CorrectAnswer == true) {document.write("class='correctAnswer'");}else{document.write("class='answer'");}
-                        document.write("><input class='form-control' type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_True'/>True</div>");
+                        document.write("><strong><input class='form-control' type='radio' name='question_" + question.Id + "_choices' id='question_" + question.Id + "_True'/>True</strong></div>");
 
                         document.write("<div ");
                         if (question.CorrectAnswer == false) {document.write("class='correctAnswer'");}else{document.write("class='answer'");}
