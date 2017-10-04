@@ -339,14 +339,14 @@
 
                     case QUESTION_TYPE_NUMERIC:
                         document.write("<div class='correctAnswer'><input class='form-control' type='text' value='' id='question_" + question.Id + "_Text' onchange='CheckNumeric(this)'/> (");
-                        document.write(question.CorrectAnswer + ")</div></div></div>");
+                        document.write(question.CorrectAnswer + ")</div>");
                     break;
 
                     default:
                         alert("invalid question type detected");
                     break;
                 }
-                document.write ("</div>");      //close out question div
+                document.write ("</div></div></div>");      //close out question div
             }
             document.write("<input class='btn btn-outline-dark' type='button' value='Submit Your Answers' onclick='SubmitAnswers();' />");
             document.write ("</form></div>");      //close out test div
