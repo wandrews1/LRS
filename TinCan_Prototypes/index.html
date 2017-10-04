@@ -303,8 +303,17 @@
     </head>
 
     <body>
-        <div id="topLinks" style="text-align:center; width:100%;font-size:200%;margin:15px;"><a href="http://tincanapi.com/">Tin Can Home</a>&nbsp;&nbsp;&nbsp; <a href="/LRS/usage">Build Your Own</a></div>
+        <div id="topLinks" style="text-align:center; width:100%;font-size:200%;margin:15px;">
+            <a href="http://tincanapi.com/">
+                Tin Can Home
+            </a>&nbsp;&nbsp;&nbsp; 
+            <a href="/LRS/usage">
+                Build Your Own
+            </a>
+        </div>
+
         <div class="container">
+
             <div class="tclogo"><a target="_blank" href="http://tincanapi.com/"><img src="GolfExample_TCAPI/img/tincan-300x176.png"/></a></div>
                 <h1>Tin Can Prototypes</h1>
                 <div>
@@ -313,6 +322,7 @@
                     <br>
                 </div>
                 <br class="clear">
+
                 <div class="configInfo infoDiv rounded">
                     <h4>Prototype Configuration Settings</h4>
                     <div class="info">
@@ -331,6 +341,7 @@
                     </div>
                     <a href="#" class="btn btn-outline-dark refreshRegistration">New Registration</a><a href="#" class="btn btn-outline-dark resetRegistration">Reset</a>
                 </div>
+
 
                 <div class="prototypeDiv">
                     <h2 class="">Report Sample</h2>
@@ -356,114 +367,98 @@
                     <hr>
                 </div>
 
-                <div class="prototypeDiv">
-                    <h2>Butcher Block Example</h2>
-                    <ul>
-                        <li>Records each time the course is launched with an attempt.(Uses LRS single statement puts.)</li>
-                        <li>Keeps track of the progress of a learner and provides for a returning learner to resume progress.(Uses LRS state get/put calls.)</li>
-                        <li>Records the learner question responses and overall score from the end of course assessment.(Uses LRS single and multi-statement puts/posts.) </li>
-                        <li>Records course completion.(Uses LRS single statement put with score reporting.)</li>
-                    </ul>
-                    <div class="alert alert-danger" role="alert">
-                      WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
-                    </div>
-                    <br>
-                    <br>
-
-                    <form class="form-inline">
-                        <label class="sr-only" for="tc_nameInput_golf">Name</label>
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </div>
-                            <input type="text" class="form-control" id="tc_nameInput_golf" placeholder="Name">
+                <div class="card prototypeDiv" style="width: 60rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Butcher Block Example</h4>
+                        <ul>
+                            <li>Records each time the course is launched with an attempt.(Uses LRS single statement puts.)</li>
+                            <li>Keeps track of the progress of a learner and provides for a returning learner to resume progress.(Uses LRS state get/put calls.)</li>
+                            <li>Records the learner question responses and overall score from the end of course assessment.(Uses LRS single and multi-statement puts/posts.) </li>
+                            <li>Records course completion.(Uses LRS single statement put with score reporting.)</li>
+                        </ul>
+                        <div class="alert alert-danger" role="alert">
+                            WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
                         </div>
 
-                        <label class="sr-only" for="tc_emailInput_golf">Email</label>
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon">
-                                <i class="fa fa-at" aria-hidden="true"></i>
-                            </div>
-                            <input type="text" class="form-control" id="tc_emailInput_golf" placeholder="Username">
-                        </div>
-
-                        <a class="btn btn-outline-dark" id="golfExampleLaunch" role="button" target="_blank" data-baseref="GolfExample_TCAPI/index.html?" href="GolfExample_TCAPI/index.html?" >Launch Butcher Block Example</a>
-
-                        <!-- <button type="submit" class="btn btn-outline-dark" id="golfExampleLaunch" target="_blank" data-baseref="GolfExample_TCAPI/index.html?" href="GolfExample_TCAPI/index.html?">
-                            Launch Butcher Block Example
-                        </button> -->
-
-                    </form>
-
-
-                    <!-- <form class="form-inline">
-                        <div class="form-group">
+                        <form class="form-inline">
                             <label class="sr-only" for="tc_nameInput_golf">Name</label>
-                            <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-                            <small id="passwordHelpInline" class="text-muted">
-                                Must be 8-20 characters long.
-                            </small>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="tc_nameInput_golf" placeholder="Name">
+                            </div>
+
+                            <label class="sr-only" for="tc_emailInput_golf">Email</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-at" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="tc_emailInput_golf" placeholder="Username">
+                            </div>
+
+                            <a class="btn btn-outline-dark" id="golfExampleLaunch" role="button" target="_blank" data-baseref="GolfExample_TCAPI/index.html?" href="GolfExample_TCAPI/index.html?" >Launch Butcher Block Example</a>
+                        </form>
+                </div>
+
+
+                <div class="card prototypeDiv" style="width: 60rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Js Tetris</h4>
+                        <ul>
+                            <li>Allows the player to optionally report tetris game data back to the LRS.</li>
+                            <li>When enabled, reports when a player starts a new game of tetris.(Uses LRS single statement puts.)</li>
+                            <li>When enabled, reports when a player achieves a new level.(Uses LRS single statement puts.)</li>
+                            <li>When enabled, reports when a player's game is over, reporting score, levels completed,lines completed, etc.(Uses LRS single statement puts.)</li>
+                            <li>When enabled, reports when a player achieves a top 15 high score.(Uses LRS activity profile puts.)</li>
+                            <li>Reports the top 15 high scores achieved by all reporting players.(Uses LRS activity profile gets.)</li>
+                        </ul>
+                        <div class="alert alert-danger" role="alert">
+                            WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
                         </div>
-                    </form> -->
-
-<!-- 
-                    Name: <input type="text" class="form-control" id="tc_nameInput_golf">
-                    &nbsp;&nbsp;&nbsp;
-                    Email: <input type="text" class="form-control" id="tc_emailInput_golf">
-                    <br>
-                    <a class="btn btn-outline-dark" id="golfExampleLaunch" target="_blank" data-baseref="GolfExample_TCAPI/index.html?" href="GolfExample_TCAPI/index.html?" >Launch Butcher Block Example</a>
- -->
-                    <br>
-                    <br>
-                    <hr>
-                </div>
-
-                <div class="prototypeDiv">
-                    <h2>Js Tetris</h2>
-                    <ul>
-                        <li>Allows the player to optionally report tetris game data back to the LRS.</li>
-                        <li>When enabled, reports when a player starts a new game of tetris.(Uses LRS single statement puts.)</li>
-                        <li>When enabled, reports when a player achieves a new level.(Uses LRS single statement puts.)</li>
-                        <li>When enabled, reports when a player's game is over, reporting score, levels completed,lines completed, etc.(Uses LRS single statement puts.)</li>
-                        <li>When enabled, reports when a player achieves a top 15 high score.(Uses LRS activity profile puts.)</li>
-                        <li>Reports the top 15 high scores achieved by all reporting players.(Uses LRS activity profile gets.)</li>
-                    </ul>
-                    <div class="alert alert-danger" role="alert">
-                      WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
+                        <a id="jsExampleLaunch" href="" target="_blank" data-baseref="JsTetris_TCAPI/tetris.html?" class="btn btn-outline-dark">Launch Js Tetris</a>
                     </div>
-                    <br>
-                    <br>
-                    <a id="jsExampleLaunch" href="" target="_blank" data-baseref="JsTetris_TCAPI/tetris.html?" class="btn btn-outline-dark">Launch Js Tetris</a>
-                    <br>
-                    <br>
-                    <hr>
                 </div>
 
-                <div class="prototypeDiv">
-                    <h2>Locator Example</h2>
-                    <ul>
-                        <li>Requires a browser/device that allows location tracking.</li>
-                        <li>Reports to the LRS when a user is at a specified geographic location and selects to "Save Location". (Uses LRS single statement puts with context.)</li>
-                        <li>Reports completion to the LRS when a user has visited and saved all of the specified locations in the course. (Uses LRS single statement puts with context.)</li>
-                        <li style="{font-weight:bold;}">For testing purposes, this example has a "cheat" such that by pressing '?' on the page, the finder will identify you as being at one of the placemarks. Pressing '?' again will disable this "cheat".</li>
-                    </ul>
-                    <div class="alert alert-danger" role="alert">
-                      WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
+
+
+                <div class="card prototypeDiv" style="width: 60rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Locator Example</h4>
+                        <ul>
+                            <li>Requires a browser/device that allows location tracking.</li>
+                            <li>Reports to the LRS when a user is at a specified geographic location and selects to "Save Location". (Uses LRS single statement puts with context.)</li>
+                            <li>Reports completion to the LRS when a user has visited and saved all of the specified locations in the course. (Uses LRS single statement puts with context.)</li>
+                            <li style="{font-weight:bold;}">For testing purposes, this example has a "cheat" such that by pressing '?' on the page, the finder will identify you as being at one of the placemarks. Pressing '?' again will disable this "cheat".</li>
+                        </ul>
+                        <div class="alert alert-danger" role="alert">
+                            <p>WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.</p>
+                            <hr>
+                            <p class="mb-0">If you or somebody using the email address below has already visited all of the locations, be sure to start a <a href="#" class="refreshRegistration">New Registration</a> before launching the activity.</p>
+                        </div>
+
+                        <form class="form-inline">
+                            <label class="sr-only" for="tc_nameInput_loc">Name</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="tc_nameInput_loc" placeholder="Name">
+                            </div>
+
+                            <label class="sr-only" for="tc_emailInput_loc">Email</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-at" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="tc_emailInput_loc" placeholder="Username">
+                            </div>
+
+                            <a class="btn btn-outline-dark" id="locatorExampleLaunch" role="button" target="_blank" data-baseref="LocatorExample_TCAPI/index.html?" href="LocatorExample_TCAPI/index.html?" >Launch Locator Example</a>
+                        </form>
                     </div>
-                    <br>
-                    <br>
-                    If you or somebody using the email address below has already visited all of the locations, be sure to start a <a href="#" class="refreshRegistration">New Registration</a> before launching the activity.</div><br/>
-
-                    Name: <input type="text" class="form-control" id="tc_nameInput_loc">
-                    &nbsp;&nbsp;&nbsp;
-                    Email: <input type="text" class="form-control" id="tc_emailInput_loc">
-                    <br>
-                    <a id="locatorExampleLaunch" target="_blank" data-baseref="Locator_TCAPI/index.html?" href="Locator_TCAPI/index.html?" class="btn btn-outline-dark">Launch Locator Example</a>
-            
-                    <br>
-                    <br>
                 </div>
-            </div>
+
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
