@@ -324,8 +324,7 @@
               testAPI();
             } else {
               // The person is not logged into your app or we are unable to tell.
-              document.getElementById('status').innerHTML = 'Please log ' +
-                'into this app.';
+              document.getElementById('status').innerHTML = 'Please log into this app.';
             }
           }
 
@@ -358,19 +357,9 @@
           //
           // These three cases are handled in the callback function.
 
-          FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-          });
-
-          // FB.getLoginStatus(function(response) {
-          //   if (response.status === 'connected') {
-          //       document.getElementById('status').innerHTML = 'We are connected.';
-          //   } else if (response.status === 'not_authorized') {
-          //       document.getElementById('status').innerHTML = 'We are not logged in.';
-          //   } else {
-          //       document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
-          //   }
-          // });
+              FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+              });
 
 
           };
@@ -389,10 +378,11 @@
           function testAPI() {
             console.log('Welcome!  Fetching your information.... ');
             FB.api('/me', function(response) {
-              console.log('Successful login for: ' + response.name);
-              console.log(response.name);
-              document.getElementById('tc_nameInput_golf').innerHTML = response.name;
-              document.getElementById('tc_emailInput_golf').innerHTML = response.email;
+                console.log(JSON.stringify(response));
+                console.log('Successful login for: ' + response.name);
+                console.log(response.name);
+                document.getElementById('tc_nameInput_golf').innerHTML = response.name;
+                document.getElementById('tc_emailInput_golf').innerHTML = response.email;
             });
           }
         </script>
@@ -441,7 +431,7 @@
                             To generate and use a new registration UUID, click <a href="#" class="refreshRegistration">New Registration</a> below.  This will cause all of the prototypes to launch as a new attempt rather than using existing State data. Click <a href="#" class="resetRegistration">Reset</a> to reset registration to the original configuration value.
                         </div>
                         <br>
-                        <center><a href="#" class="btn btn-outline-danger refreshRegistration">New Registration</a> <a href="#" class="btn btn-outline-danger resetRegistration">Reset</a> <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+                        <center><a href="#" class="btn btn-outline-danger refreshRegistration">New Registration</a> <a href="#" class="btn btn-outline-danger resetRegistration">Reset</a> <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
                         </center>
                     </div>
                 </div>
