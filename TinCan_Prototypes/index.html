@@ -77,7 +77,7 @@
         <script src="scripts/jquery-1.6.2.min.js"></script>
         <script src="scripts/base64.js"></script>
         <script src="config.js"></script>
-        <script src="GolfExample_TCAPI/scripts/TinCanJS/build/tincan.js"></script>
+        <script src="ButcherExample_TCAPI/scripts/TinCanJS/build/tincan.js"></script>
 
         <script type="text/javascript">
             /*
@@ -201,8 +201,8 @@
                 var PROTOTYPE_AUTH = 'Basic ' + Base64.encode(Config.authUser + ':' + Config.authPassword);
                 var PROTOTYPE_REGISTRATION = Config.registration || TinCan.Utils.getUUID();
 
-                $('#tc_nameInput_golf').val(PROTOTYPE_DEFAULT_NAME);
-                $('#tc_emailInput_golf').val(PROTOTYPE_DEFAULT_MBOX.replace('mailto:',''));
+                $('#tc_nameInput_butcher').val(PROTOTYPE_DEFAULT_NAME);
+                $('#tc_emailInput_butcher').val(PROTOTYPE_DEFAULT_MBOX.replace('mailto:',''));
                 $('#tc_nameInput_loc').val(PROTOTYPE_DEFAULT_NAME);
                 $('#tc_emailInput_loc').val(PROTOTYPE_DEFAULT_MBOX.replace('mailto:',''));
 
@@ -214,8 +214,8 @@
 
                 $('.fbRegistration').click(function(){
                     PROTOTYPE_REGISTRATION = TinCan.Utils.getUUID();
-                    $('#tc_nameInput_golf').val(response.name);
-                    $('#tc_emailInput_golf').val(response.email);
+                    $('#tc_nameInput_butcher').val(response.name);
+                    $('#tc_emailInput_butcher').val(response.email);
                     return false;
                 });
 
@@ -224,13 +224,13 @@
                     $('#defRegistration').text(PROTOTYPE_REGISTRATION);
                 });
 
-                $('#golfExampleLaunch').click(function(){
-                    var em = $("#tc_emailInput_golf").val();
+                $('#butcherExampleLaunch').click(function(){
+                    var em = $("#tc_emailInput_butcher").val();
                     var mbox = (em.indexOf('mailto:') == 0) ? em : 'mailto:' + em;
-                    var nm = $("#tc_nameInput_golf").val();
+                    var nm = $("#tc_nameInput_butcher").val();
                     var actor = {'mbox' : mbox, 'name' : nm};
 
-                    sendLaunchedStatement(actor, "http://id.tincanapi.com/activity/tincan-prototypes/golf-example", PROTOTYPE_REGISTRATION);
+                    sendLaunchedStatement(actor, "http://id.tincanapi.com/activity/tincan-prototypes/butcher-example", PROTOTYPE_REGISTRATION);
 
                     $(this).attr('href',$(this).attr('data-baseref')
                         + "endpoint=" + encodeURIComponent(PROTOTYPE_ENDPOINT)
@@ -331,7 +331,7 @@
 
         <div class="container">
 
-            <div class="tclogo"><a target="_blank" href="http://tincanapi.com/"><img src="GolfExample_TCAPI/img/tincan-300x176.png"/></a></div>
+            <div class="tclogo"><a target="_blank" href="http://tincanapi.com/"><img src="ButcherExample_TCAPI/img/tincan-300x176.png"/></a></div>
                 <h1>Tin Can Prototypes</h1>
                 <div>
                     You have reached the main launching page for Tin Can prototypes.  From this page, you can launch the different sites/courses set up to report to the LRS.
