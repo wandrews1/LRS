@@ -1,25 +1,25 @@
-GolfExample = {};
+ButcherExample = {};
 
-GolfExample.CourseActivity = {
-    id: "http://id.tincanapi.com/activity/tincan-prototypes/golf-example",
+ButcherExample.CourseActivity = {
+    id: "http://id.tincanapi.com/activity/tincan-prototypes/butcher-example",
     definition: {
         type: "http://adlnet.gov/expapi/activities/course",
         name: {
-            "en-US": "Golf Example - Tin Can Course"
+            "en-US": "Butcher Example - Tin Can Course"
         },
         description: {
-            "en-US": "An overview of how to play the great game of golf."
+            "en-US": "An overview of how to play the great game of butchering."
         }
     }
 };
 
-GolfExample.getContext = function(parentActivityId, isAssessment) {
+ButcherExample.getContext = function(parentActivityId, isAssessment) {
     isAssessment = typeof isAssessment !== 'undefined' ? isAssessment : false;
     var ctx = {
         contextActivities: {
             grouping: [
                 {
-                    id: GolfExample.CourseActivity.id
+                    id: ButcherExample.CourseActivity.id
                 },
                 {
                     id: "http://id.tincanapi.com/activity/tincan-prototypes"
@@ -54,7 +54,7 @@ GolfExample.getContext = function(parentActivityId, isAssessment) {
     }
     if (isAssessment){
         ctx.contextActivities.grouping.push({
-            id: GolfExample.CourseActivity.id + "/GolfAssessment"
+            id: ButcherExample.CourseActivity.id + "/ButcherAssessment"
         });
     }
     return ctx;
