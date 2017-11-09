@@ -15,23 +15,23 @@
         <div class="container">
             <h1>Tin Can Viewer</h1>
 
-            <ul>
+            <ul class="tabs">
 
                 <!-- Give href an ID value of corresponding "tabs-content" <li>'s -->
-                <li><a href="#allStatements">Statements</a></li>
+                <li><a class="active" href="#allStatements">Statements</a></li>
                 <li><a href="#golfCourse">Butcher Block Reporting</a></li>
                 <li><a href="#tetrisScores">Tetris Reporting</a></li>
                 <li><a href="#locatorCourse">Locator Reporting</a></li>
             </ul>
 
             <!-- Standard <ul> with class of "tabs-content" -->
-            <ul class="nav nav-tabs tabs-content">
+            <ul class="tabs-content">
                 <!-- Give ID that matches HREF of above anchors -->
 
-                <li class="nav-item active" id="allStatements">
+                <li class="active" id="allStatements">
                     Click on a statement to see the raw statement data.
                     <br/><br/>
-                    <button type="button" class="btn btn-dark" id='refreshStatements'>Refresh</button>
+                    <button id='refreshStatements'>Refresh</button>
                     <div id='theStatements'></div>
                     <button id='showAllStatements'>More...</button>
                 </li>
