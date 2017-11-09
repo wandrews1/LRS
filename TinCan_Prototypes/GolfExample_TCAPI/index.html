@@ -32,7 +32,7 @@
             tincan = new TinCan (
                 {
                     url: window.location.href,
-                    activity: GolfExample.CourseActivity
+                    activity: ButcherExample.CourseActivity
                 }
             );
 
@@ -156,7 +156,7 @@
                         "en-US" : "initialized"
                     }
                 },
-                context: GolfExample.getContext(),
+                context: ButcherExample.getContext(),
                 result: {
                     duration: "PT0S"
                 }
@@ -168,7 +168,7 @@
                         "en-US" : "attempted"
                     }
                 },
-                context: GolfExample.getContext(),
+                context: ButcherExample.getContext(),
                 result: {
                     duration: "PT0S"
                 }
@@ -187,7 +187,7 @@
                                     "en-US": "resumed"
                                 }
                             },
-                            context: GolfExample.getContext(),
+                            context: ButcherExample.getContext(),
                             result: {
                                 duration: TinCan.Utils.convertMillisecondsToISO8601Duration(bookmark.attemptDuration)
                             }
@@ -268,7 +268,7 @@
                                     "en-US": "suspended"
                                 }
                             },
-                            context: GolfExample.getContext(),
+                            context: ButcherExample.getContext(),
                             result: {
                                 duration: TinCan.Utils.convertMillisecondsToISO8601Duration(bookmarkingData.getAttemptDuration())
                             }
@@ -281,7 +281,7 @@
                                 "en-US": "terminated"
                             }
                         },
-                        context: GolfExample.getContext(),
+                        context: ButcherExample.getContext(),
                         result: {
                             duration: TinCan.Utils.convertMillisecondsToISO8601Duration(bookmarkingData.getSessionDuration())
                         }

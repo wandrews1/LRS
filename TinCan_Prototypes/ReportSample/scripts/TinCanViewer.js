@@ -45,10 +45,10 @@ $(document).ready(function(){
                 id: "http://id.tincanapi.com/activity/tincan-prototypes/tetris"
             }
         ),
-        getGolfStatements = {},
-        golfActivity = new TinCan.Activity (
+        getButcherStatements = {},
+        butcherActivity = new TinCan.Activity (
             {
-                id: "http://id.tincanapi.com/activity/tincan-prototypes/golf-example"
+                id: "http://id.tincanapi.com/activity/tincan-prototypes/butcher-example"
             }
         ),
         getTourStatements = {},
@@ -60,14 +60,14 @@ $(document).ready(function(){
 
     if (tincan.recordStores[0].version === "0.9" || tincan.recordStores[0].version === "0.95") {
         getTetrisStatements.target = tetrisActivity;
-        getGolfStatements.target = golfActivity;
+        getButcherStatements.target = butcherActivity;
         getTourStatements.target = tourActivity;
     }
     else {
         getTetrisStatements.activity = tetrisActivity;
         getTetrisStatements.related_activities = true;
-        getGolfStatements.activity = golfActivity;
-        getGolfStatements.related_activities = true;
+        getButcherStatements.activity = butcherActivity;
+        getButcherStatements.related_activities = true;
         getTourStatements.activity = tourActivity;
         getTourStatements.related_activities = true;
     }
@@ -150,24 +150,24 @@ $(document).ready(function(){
 
     tincan.getStatements(
         {
-            params: getGolfStatements,
-            callback: RenderGolfData
+            params: getButcherStatements,
+            callback: RenderButcherData
         }
     );
-    RequestGolfQuestions();
+    RequestButcherQuestions();
 
-    $("#refreshGolfData").click(function(){
-        $("#golfCourseData").empty();
+    $("#refreshButcherData").click(function(){
+        $("#ButcherCourseData").empty();
 
         tincan.getStatements(
             {
-                params: getGolfStatements,
-                callback: RenderGolfData
+                params: getButcherStatements,
+                callback: RenderButcherData
             }
         );
 
-        $(".golfQuestion").remove();
-        RequestGolfQuestions();
+        $(".butcherQuestion").remove();
+        RequestButcherQuestions();
     });
 
     tincan.getStatements(
@@ -429,7 +429,7 @@ function RenderTetrisScoreChart (err, result) {
     gamesChart.draw(gamesData, gamesOptions);
 }
 
-function RenderGolfData (err, result) {
+function RenderButcherData (err, result) {
     var statements,
         html,
         learners = [],
@@ -445,12 +445,12 @@ function RenderGolfData (err, result) {
         },
         assessmentActivity = new TinCan.Activity (
             {
-                id: "http://id.tincanapi.com/activity/tincan-prototypes/golf-example/GolfAssessment"
+                id: "http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment"
             }
         );
 
     if (err !== null) {
-        $('#golfCourseData').append("Error occurred: " + err);
+        $('#butcherCourseData').append("Error occurred: " + err);
         return;
     }
 
@@ -499,7 +499,7 @@ function RenderGolfData (err, result) {
     }
     html += "</table>";
 
-    $("#golfCourseData").append(html);
+    $("#butcherCourseData").append(html);
 
     if (tincan.recordStores[0].version === "0.9" || tincan.recordStores[0].version === "0.95") {
         getStatementsParams.target = assessmentActivity;
@@ -512,12 +512,12 @@ function RenderGolfData (err, result) {
     tincan.getStatements(
         {
             params: getStatementsParams,
-            callback: RenderGolfDataScores
+            callback: RenderButcherDataScores
         }
     );
 }
 
-function RenderGolfDataScores (err, result) {
+function RenderButcherDataScores (err, result) {
     var statements,
         i,
         mbox;
@@ -535,7 +535,7 @@ function RenderGolfDataScores (err, result) {
     }
 }
 
-function RequestGolfQuestions () {
+function RequestButcherQuestions () {
     var getStatementsParams = {
             verb: {
                 id: "http://adlnet.gov/expapi/verbs/answered"
@@ -543,7 +543,7 @@ function RequestGolfQuestions () {
         },
         assessmentActivity = new TinCan.Activity (
             {
-                id: "http://id.tincanapi.com/activity/tincan-prototypes/golf-example"
+                id: "http://id.tincanapi.com/activity/tincan-prototypes/butcher-example"
             }
         );
 
@@ -559,12 +559,12 @@ function RequestGolfQuestions () {
     tincan.getStatements(
         {
             params: getStatementsParams,
-            callback: RenderGolfQuestions
+            callback: RenderButcherQuestions
         }
     );
 }
 
-function RenderGolfQuestions (err, result) {
+function RenderButcherQuestions (err, result) {
     var statements,
         i,
         stmt,
@@ -617,7 +617,7 @@ function RenderGolfQuestions (err, result) {
         questionId = sortedQuestionIds[i];
         results = resultsByQuestion[questionId];
 
-        html = "<tr class='golfQuestion'>";
+        html = "<tr class='butcherQuestion'>";
             html += "<td class='question'>" + results["question"] + "</td>";
             html += "<td class='correctAnswer'>" + results["correctAnswer"] + "</td>";
             html += "<td class='metric'>" + (results["numCorrect"] + results["numIncorrect"]) + "</td>";
@@ -625,7 +625,7 @@ function RenderGolfQuestions (err, result) {
             html += "<td class='metric'>" + results["numIncorrect"] + "</td>";
         html += "</tr>";
 
-        $("table#golfQuestions").append(html);
+        $("table#butcherQuestions").append(html);
     }
 }
 

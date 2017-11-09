@@ -13,7 +13,7 @@
     <script src="scripts/TinCanJS/build/tincan-min.js"></script>
     <script src="scripts/common.js"></script>
     <script type="text/javascript">
-        var activityId = GolfExample.CourseActivity.id + "/GolfAssessment";
+        var activityId = ButcherExample.CourseActivity.id + "/ButcherAssessment";
         var testObj = {
             id: activityId,
             definition: {
@@ -44,7 +44,7 @@
                 }
             },
             object: testObj,
-            context: GolfExample.getContext(GolfExample.CourseActivity.id, true),
+            context: ButcherExample.getContext(ButcherExample.CourseActivity.id, true),
             result: {
                 duration: "PT0S"
             }
@@ -120,7 +120,7 @@
                     completion: true,
                     duration: duration
                 },
-                context: GolfExample.getContext(parentActivityId, isAssessment)
+                context: ButcherExample.getContext(parentActivityId, isAssessment)
             };
 
             return stmt;
@@ -189,7 +189,7 @@
                     response: learnerResponse,
                     success: wasCorrect
                 },
-                context: GolfExample.getContext(activityId, true)
+                context: ButcherExample.getContext(activityId, true)
             }
         }
 
@@ -283,8 +283,8 @@
 
             var assessmentAttemptDuration = TinCan.Utils.convertMillisecondsToISO8601Duration( Math.abs((new Date()) - assessmentStartTimestamp) ),
                 attemptDuration = TinCan.Utils.convertMillisecondsToISO8601Duration(parent.bookmarkingData.getAttemptDuration());
-            answerStatements.push(GetRecordTestStatement(score, activityId, GolfExample.CourseActivity.id, assessmentAttemptDuration, true));
-            answerStatements.push(GetRecordTestStatement(score, GolfExample.CourseActivity.id, null, attemptDuration, false));
+            answerStatements.push(GetRecordTestStatement(score, activityId, ButcherExample.CourseActivity.id, assessmentAttemptDuration, true));
+            answerStatements.push(GetRecordTestStatement(score, ButcherExample.CourseActivity.id, null, attemptDuration, false));
 
             // send question answers
             tincan.sendStatements(answerStatements);
