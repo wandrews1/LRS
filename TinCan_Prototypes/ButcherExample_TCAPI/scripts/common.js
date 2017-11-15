@@ -27,7 +27,7 @@ ButcherExample.getContext = function(parentActivityId, isAssessment) {
             ],
             category: [
                  {
-                    id: "http://id.tincanapi.com/recipe/tincan-prototypes/golf/1",
+                    id: "http://id.tincanapi.com/recipe/tincan-prototypes/butcher/1",
                     definition: {
                         type: "http://id.tincanapi.com/activitytype/recipe"
                     }
@@ -40,7 +40,7 @@ ButcherExample.getContext = function(parentActivityId, isAssessment) {
                             "en-US": "E-learning course"
                         },
                         description: {
-                            "en-US": "An e-learning course built using the golf prototype framework."
+                            "en-US": "An e-learning course built using the butcher prototype framework."
                         }
                     }
                 }
