@@ -67,7 +67,7 @@ $(document).ready(function(){
     if (tincan.recordStores[0].version === "0.9" || tincan.recordStores[0].version === "0.95") {
         getTetrisStatements.target = tetrisActivity;
         getButcherStatements.target = butcherActivity;
-        getGolfStatements.target = GolfActivity;
+        getGolfStatements.target = golfActivity;
         getTourStatements.target = tourActivity;
     }
     else {
