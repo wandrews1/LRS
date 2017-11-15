@@ -166,7 +166,7 @@ $(document).ready(function(){
     RequestButcherQuestions();
 
     $("#refreshButcherData").click(function(){
-        $("#ButcherCourseData").empty();
+        $("#butcherCourseData").empty();
 
         tincan.getStatements(
             {
@@ -191,7 +191,7 @@ $(document).ready(function(){
     RequestGolfQuestions();
 
     $("#refreshGolfData").click(function(){
-        $("#GolfCourseData").empty();
+        $("#golfCourseData").empty();
 
         tincan.getStatements(
             {
