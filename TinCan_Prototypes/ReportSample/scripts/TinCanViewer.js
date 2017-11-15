@@ -51,6 +51,12 @@ $(document).ready(function(){
                 id: "http://id.tincanapi.com/activity/tincan-prototypes/butcher-example"
             }
         ),
+        getGolfStatements = {},
+        golfActivity = new TinCan.Activity (
+            {
+                id: "http://id.tincanapi.com/activity/tincan-prototypes/golf-example"
+            }
+        ),
         getTourStatements = {},
         tourActivity = new TinCan.Activity (
             {
@@ -61,6 +67,7 @@ $(document).ready(function(){
     if (tincan.recordStores[0].version === "0.9" || tincan.recordStores[0].version === "0.95") {
         getTetrisStatements.target = tetrisActivity;
         getButcherStatements.target = butcherActivity;
+        getGolfStatements.target = GolfActivity;
         getTourStatements.target = tourActivity;
     }
     else {
@@ -68,6 +75,8 @@ $(document).ready(function(){
         getTetrisStatements.related_activities = true;
         getButcherStatements.activity = butcherActivity;
         getButcherStatements.related_activities = true;
+        getGolfStatements.activity = golfActivity;
+        getGolfStatements.related_activities = true;
         getTourStatements.activity = tourActivity;
         getTourStatements.related_activities = true;
     }
@@ -169,6 +178,36 @@ $(document).ready(function(){
         $(".butcherQuestion").remove();
         RequestButcherQuestions();
     });
+
+
+
+
+    tincan.getStatements(
+        {
+            params: getGolfStatements,
+            callback: RenderGolfData
+        }
+    );
+    RequestGolfQuestions();
+
+    $("#refreshGolfData").click(function(){
+        $("#GolfCourseData").empty();
+
+        tincan.getStatements(
+            {
+                params: getGolfStatements,
+                callback: RenderGolfData
+            }
+        );
+
+        $(".golfQuestion").remove();
+        RequestGolfQuestions();
+    });
+
+
+
+
+
 
     tincan.getStatements(
         {
@@ -628,6 +667,223 @@ function RenderButcherQuestions (err, result) {
         $("table#butcherQuestions").append(html);
     }
 }
+
+
+
+
+
+
+
+
+function RenderGolfData (err, result) {
+    var statements,
+        html,
+        learners = [],
+        learnerObjs = {},
+        i,
+        j,
+        l,
+        mbox,
+        getStatementsParams = {
+            verb: {
+                id: "http://adlnet.gov/expapi/verbs/completed",
+            }
+        },
+        assessmentActivity = new TinCan.Activity (
+            {
+                id: "http://id.tincanapi.com/activity/tincan-prototypes/golf-example/GolfAssessment"
+            }
+        );
+
+    if (err !== null) {
+        $('#golfCourseData').append("Error occurred: " + err);
+        return;
+    }
+
+    statements = result.statements;
+
+    html = "<table><tr class='labels'>";
+    html += "<td class='name'>Learner</td>";
+    html += "<td class='completion'>Status</td>";
+    html += "<td class='score'>Score</td>";
+    html += "</tr>";
+
+    for (i = 0; i < statements.length; i++) {
+        if (statements[i].actor === null) {
+            continue;
+        }
+        mbox = statements[i].actor.mbox;
+        if (typeof learnerObjs[mbox] === "undefined") {
+            learners.push(mbox);
+            learnerObjs[mbox] = {};
+            learnerObjs[mbox].complete = 'incomplete';
+            learnerObjs[mbox].score = '-';
+        }
+        if (typeof learnerObjs[mbox].name === "undefined" || learnerObjs[mbox].name == mbox) {
+            learnerObjs[mbox].name = statements[i].actor.toString();
+        }
+
+        if (statements[i].verb.id === "http://adlnet.gov/expapi/verbs/completed") {
+            learnerObjs[mbox].complete = 'complete';
+        }
+        if (statements[i].verb.id === "http://adlnet.gov/expapi/verbs/passed") {
+            learnerObjs[mbox].complete = 'passed';
+            learnerObjs[mbox].score = (statements[i].result.score.scaled * 100).toString() + "%";
+        }
+        if (statements[i].verb.id === "http://adlnet.gov/expapi/verbs/failed") {
+            learnerObjs[mbox].complete = 'failed';
+            learnerObjs[mbox].score = (statements[i].result.score.scaled * 100).toString() + "%";
+        }
+    }
+    for (j in learners){
+        l = learnerObjs[learners[j]];
+        html += "<tr>";
+        html += "<td class='name'>" + l.name + "</td>";
+        html += "<td class='completion " + l.complete + "'>" + l.complete + "</td>";
+        html += "<td class='score' mbox='" + learners[j] + "'>" + l.score + "</td>";
+        html += "<tr>";
+    }
+    html += "</table>";
+
+    $("#golfCourseData").append(html);
+
+    if (tincan.recordStores[0].version === "0.9" || tincan.recordStores[0].version === "0.95") {
+        getStatementsParams.target = assessmentActivity;
+    }
+    else {
+        getStatementsParams.activity = assessmentActivity;
+        getStatementsParams.related_activities = true;
+    }
+
+    tincan.getStatements(
+        {
+            params: getStatementsParams,
+            callback: RenderGolfDataScores
+        }
+    );
+}
+
+function RenderGolfDataScores (err, result) {
+    var statements,
+        i,
+        mbox;
+
+    if (err !== null) {
+        $('.score[mbox="' + mbox + '"]').text("Error occurred: " + err);
+        return;
+    }
+
+    statements = result.statements;
+
+    for (i = 0; i < statements.length ; i++) {
+        mbox = statements[i].actor.mbox;
+        $('.score[mbox="' + mbox + '"]').text(statements[i].result.score.raw);
+    }
+}
+
+function RequestGolfQuestions () {
+    var getStatementsParams = {
+            verb: {
+                id: "http://adlnet.gov/expapi/verbs/answered"
+            }
+        },
+        assessmentActivity = new TinCan.Activity (
+            {
+                id: "http://id.tincanapi.com/activity/tincan-prototypes/golf-example"
+            }
+        );
+
+
+    if (tincan.recordStores[0].version === "0.9" || tincan.recordStores[0].version === "0.95") {
+        getStatementsParams.target = assessmentActivity;
+    }
+    else {
+        getStatementsParams.activity = assessmentActivity;
+        getStatementsParams.related_activities = true;
+    }
+
+    tincan.getStatements(
+        {
+            params: getStatementsParams,
+            callback: RenderGolfQuestions
+        }
+    );
+}
+
+function RenderGolfQuestions (err, result) {
+    var statements,
+        i,
+        stmt,
+        resultsByQuestion = {},
+        questionId,
+        sortedQuestionIds = [],
+        html,
+        results;
+
+    if (err !== null || result.statements.length === 0) {
+        return;
+    }
+
+    statements = result.statements;
+
+    for (i = 0; i < statements.length; i++) {
+        stmt = statements[i];
+
+        questionId = stmt.target.id;
+
+        if (typeof resultsByQuestion[questionId] === "undefined") {
+            resultsByQuestion[questionId] = {
+                question: stmt.target.definition.getLangDictionaryValue("description"),
+                correctAnswer: "",
+                numCorrect: 0,
+                numIncorrect: 0
+            };
+            if (stmt.target.definition.correctResponsesPattern !== null) {
+                if (stmt.target.definition.interactionType == "numeric"){
+                    resultsByQuestion[questionId].correctAnswer = stmt.target.definition.correctResponsesPattern[0].split("[:]")[0];
+                } 
+                else {
+                    resultsByQuestion[questionId].correctAnswer = stmt.target.definition.correctResponsesPattern[0];
+                }
+            }
+        }
+        if (stmt.result.success === true) {
+            resultsByQuestion[questionId]["numCorrect"] += 1;
+        } else {
+            resultsByQuestion[questionId]["numIncorrect"] += 1;
+        }
+    }
+
+    for (prop in resultsByQuestion) {
+        sortedQuestionIds.push(prop);
+    }
+    sortedQuestionIds.sort();
+
+    for (i = 0; i < sortedQuestionIds.length; i++) {
+        questionId = sortedQuestionIds[i];
+        results = resultsByQuestion[questionId];
+
+        html = "<tr class='golfQuestion'>";
+            html += "<td class='question'>" + results["question"] + "</td>";
+            html += "<td class='correctAnswer'>" + results["correctAnswer"] + "</td>";
+            html += "<td class='metric'>" + (results["numCorrect"] + results["numIncorrect"]) + "</td>";
+            html += "<td class='metric'>" + results["numCorrect"] + "</td>";
+            html += "<td class='metric'>" + results["numIncorrect"] + "</td>";
+        html += "</tr>";
+
+        $("table#golfQuestions").append(html);
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 function RenderLocationData (err, result) {
     var statements,

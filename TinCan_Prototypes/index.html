@@ -78,6 +78,7 @@
         <script src="scripts/base64.js"></script>
         <script src="config.js"></script>
         <script src="ButcherExample_TCAPI/scripts/TinCanJS/build/tincan.js"></script>
+        <script src="GolfExample_TCAPI/scripts/TinCanJS/build/tincan.js"></script>
 
         <script type="text/javascript">
             /*
@@ -203,6 +204,8 @@
 
                 $('#tc_nameInput_butcher').val(PROTOTYPE_DEFAULT_NAME);
                 $('#tc_emailInput_butcher').val(PROTOTYPE_DEFAULT_MBOX.replace('mailto:',''));
+                $('#tc_nameInput_golf').val(PROTOTYPE_DEFAULT_NAME);
+                $('#tc_emailInput_golf').val(PROTOTYPE_DEFAULT_MBOX.replace('mailto:',''));
                 $('#tc_nameInput_loc').val(PROTOTYPE_DEFAULT_NAME);
                 $('#tc_emailInput_loc').val(PROTOTYPE_DEFAULT_MBOX.replace('mailto:',''));
 
@@ -214,6 +217,10 @@
 
                 $('.fbRegistration').click(function(){
                     PROTOTYPE_REGISTRATION = TinCan.Utils.getUUID();
+                    $('#tc_nameInput_loc').val(response.name);
+                    $('#tc_emailInput_loc').val(response.email);
+                    $('#tc_nameInput_golf').val(response.name);
+                    $('#tc_emailInput_golf').val(response.email);
                     $('#tc_nameInput_butcher').val(response.name);
                     $('#tc_emailInput_butcher').val(response.email);
                     return false;
@@ -231,6 +238,23 @@
                     var actor = {'mbox' : mbox, 'name' : nm};
 
                     sendLaunchedStatement(actor, "http://id.tincanapi.com/activity/tincan-prototypes/butcher-example", PROTOTYPE_REGISTRATION);
+
+                    $(this).attr('href',$(this).attr('data-baseref')
+                        + "endpoint=" + encodeURIComponent(PROTOTYPE_ENDPOINT)
+                        + "&auth=" + encodeURIComponent(PROTOTYPE_AUTH)
+                        + "&actor=" +encodeURIComponent(JSON.stringify(actor))
+                        + "&registration=" +encodeURIComponent(PROTOTYPE_REGISTRATION));
+
+                    return true;
+                });
+
+                $('#golfExampleLaunch').click(function(){
+                    var em = $("#tc_emailInput_golf").val();
+                    var mbox = (em.indexOf('mailto:') == 0) ? em : 'mailto:' + em;
+                    var nm = $("#tc_nameInput_golf").val();
+                    var actor = {'mbox' : mbox, 'name' : nm};
+
+                    sendLaunchedStatement(actor, "http://id.tincanapi.com/activity/tincan-prototypes/golf-example", PROTOTYPE_REGISTRATION);
 
                     $(this).attr('href',$(this).attr('data-baseref')
                         + "endpoint=" + encodeURIComponent(PROTOTYPE_ENDPOINT)
@@ -427,6 +451,41 @@
                     </div>
                 </div>
 
+                <div class="card prototypeDiv" style="width: 60rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Golf Example</h4>
+                        <ul>
+                            <li>Records each time the course is launched with an attempt.(Uses LRS single statement puts.)</li>
+                            <li>Keeps track of the progress of a learner and provides for a returning learner to resume progress.(Uses LRS state get/put calls.)</li>
+                            <li>Records the learner question responses and overall score from the end of course assessment.(Uses LRS single and multi-statement puts/posts.) </li>
+                            <li>Records course completion.(Uses LRS single statement put with score reporting.)</li>
+                        </ul>
+                        <div class="alert alert-danger" role="alert">
+                            WARNING: Name and email will appear in the LRS viewer. Use default or made-up names &amp; email if you don't want yours to appear.
+                        </div>
+
+                        <form class="form-inline">
+                            <label class="sr-only" for="tc_nameInput_golf">Name</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="tc_nameInput_golf" placeholder="Name">
+                            </div>
+
+                            <label class="sr-only" for="tc_emailInput_golf">Email</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-at" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="tc_emailInput_golf" placeholder="Username">
+                            </div>
+
+                            <a class="btn btn-outline-dark" id="GolfExampleLaunch" role="button" target="_blank" data-baseref="GolfExample_TCAPI/index.html?" href="GolfExample_TCAPI/index.html?" >Launch Golf Example</a>
+                        </form>
+                    </div>
+                </div>
+
 
                 <div class="card prototypeDiv" style="width: 60rem;">
                     <div class="card-body">
@@ -525,6 +584,10 @@
                     const name = response.name;
                     const email = response.email;
                     
+                    document.getElementById("tc_nameInput_loc").value = name;
+                    document.getElementById("tc_emailInput_loc").value = email;
+                    document.getElementById("tc_nameInput_golf").value = name;
+                    document.getElementById("tc_emailInput_golf").value = email;
                     document.getElementById("tc_nameInput_butcher").value = name;
                     document.getElementById("tc_emailInput_butcher").value = email;
                 });
