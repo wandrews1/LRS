@@ -50,6 +50,25 @@ table#golfQuestions td.question {text-align:left;}
 table#golfQuestions td.correctAnswer {}
 table#golfQuestions td.metric {}
 
+
+#butcherCourseData table {width:300px;}
+#butcherCourseData tr.labels td {font-size:.8em;text-decoration:underline;}
+#butcherCourseData td {padding:3px 0;}
+#butcherCourseData td.name {}
+#butcherCourseData td.completion {text-align:right;}
+#butcherCourseData td.completion.complete {color:green;}
+#butcherCourseData td.completion.incomplete {color:red;}
+#butcherCourseData td.score {text-align:right;}
+
+table#butcherQuestions {}
+table#butcherQuestions tr.labels td {font-size:.8em;text-decoration:underline;}
+table#butcherQuestions td {padding:3px;text-align:right;}
+table#butcherQuestions td.question {text-align:left;}
+table#butcherQuestions td.correctAnswer {}
+table#butcherQuestions td.metric {}
+
+
+
 #locationCourseData table {width:300px;}
 #locationCourseData tr.labels td {font-size:.8em;text-decoration:underline;}
 #locationCourseData td {padding:3px 0;}

@@ -18,6 +18,7 @@ categorized in the context of ```http://id.tincanapi.com/recipe/tincan-prototype
 * http://id.tincanapi.com/activity/tincan-prototypes/launcher
 * http://id.tincanapi.com/activity/tincan-prototypes/launcher-template
 * http://id.tincanapi.com/activity/tincan-prototypes/golf-example
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example
 * http://id.tincanapi.com/activity/tincan-prototypes/tetris
 * http://id.tincanapi.com/activity/tincan-prototypes/nashville-museums-tour
 
@@ -36,6 +37,73 @@ The launcher itself is experienced. It launches the other content.
 
 ##Extensions
 None.
+
+# Butcher Prototype
+The Butcher prototype is an example of a classic slide-slide-quiz e-learning course. This
+recipe is based on emerging best practice for this type of course. 
+
+##Recipe
+All statements include the Recipe ID in the 'category' context activity list.
+
+* http://id.tincanapi.com/recipe/tincan-prototypes/butcher/1
+
+##Activities
+Statements are grouped in the context of ```http://id.tincanapi.com/activity/tincan-prototypes``` and ```http://id.tincanapi.com/activity/tincan-prototypes/golf-example```. They are categorized in the context of ```http://id.tincanapi.com/recipe/tincan-prototypes/golf/1``` and ```http://id.tincanapi.com/activity/tincan-prototypes/elearning```.
+
+Activity ids indicate the position of each element within the course structure. 
+
+* http://id.tincanapi.com/activity/tincan-prototypes/elearning
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Overview
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Mill
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Cut1
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Glue1
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Cut2
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Glue2
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Cut3
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Router
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Sand
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/Butcher/Finish
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_1
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_2
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_3
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_4
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_5
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_6
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_7
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_8
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_9
+* http://id.tincanapi.com/activity/tincan-prototypes/butcher-example/ButcherAssessment/interactions.etiquette_10
+
+
+##Activity Types
+The course contains pages and an assessment which contains cmi interactions.
+
+* http://id.tincanapi.com/activitytype/recipe
+* http://id.tincanapi.com/activitytype/source
+* http://adlnet.gov/expapi/activities/course
+* http://activitystrea.ms/schema/1.0/page
+* http://adlnet.gov/expapi/activities/assessment
+* http://adlnet.gov/expapi/activities/cmi.interaction
+
+##Verbs
+The session is initizalized and terminated. The attempt is attempted, suspended, resumed then passed or failed. 
+Pages are experienced and cmi intereactions are answered. 
+
+* http://adlnet.gov/expapi/verbs/initialized
+* http://adlnet.gov/expapi/verbs/terminated
+* http://adlnet.gov/expapi/verbs/attempted
+* http://adlnet.gov/expapi/verbs/resumed
+* http://adlnet.gov/expapi/verbs/suspended
+* http://adlnet.gov/expapi/verbs/passed
+* http://adlnet.gov/expapi/verbs/failed
+* http://adlnet.gov/expapi/verbs/experienced
+* http://adlnet.gov/expapi/verbs/answered
+
+##Extensions
+None.
+
 
 # Golf Prototype
 The Golf prototype is an example of a classic slide-slide-quiz e-learning course. This
