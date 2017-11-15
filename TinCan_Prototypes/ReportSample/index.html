@@ -20,6 +20,7 @@
                 <!-- Give href an ID value of corresponding "tabs-content" <li>'s -->
                 <li><a class="active" href="#allStatements">Statements</a></li>
                 <li><a href="#butcherCourse">Butcher Block Reporting</a></li>
+                <li><a href="#golfCourse">Golf Reporting</a></li>
                 <li><a href="#tetrisScores">Tetris Reporting</a></li>
                 <li><a href="#locatorCourse">Locator Reporting</a></li>
             </ul>
@@ -44,6 +45,25 @@
                     <div class="heading">Assessment Question Results</div>
                     <div id='butcherCourseQuestionData'>
                         <table id='butcherQuestions'>
+                            <tr class="labels">
+                                <td class="question">Question</td>
+                                <td class="correctAnswer">Correct Answer</td>
+                                <td class="metric">Total</td>
+                                <td class="metric">Correct</td>
+                                <td class="metric">Incorrect</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+
+                <li id="golfCourse">
+                    <button id='refreshButcherData'>Refresh</button>
+                    <div class="heading">Golf Course Learners</div>
+                    <div id='golfCourseData' ></div>
+                    <br/><br/>
+                    <div class="heading">Assessment Question Results</div>
+                    <div id='golfCourseQuestionData'>
+                        <table id='golfQuestions'>
                             <tr class="labels">
                                 <td class="question">Question</td>
                                 <td class="correctAnswer">Correct Answer</td>
