@@ -2,23 +2,9 @@
     background: #ffcc00;
     color: #000000;
 }
-
-.alert {
-   width:50%;
-}
-.bgyellow{
-	color:#FCBE07;
-}
-.bgyellowbg{
-	background-color:#FCBE07;
-}
-.bggrey{
-	width: 100%;
-	background-color:#C9C9C9;
-}
-.bgblack{
-	color:#FFFFFF;
-	background-color:#000000;
+.container-fluid{
+	width: 50%;
+	height: 50%;
 }
 .right{
     text-align: right;
@@ -34,43 +20,6 @@
 }
 .card25{
 	width: 25%;
-}
-.searchbar{
-	width: 50%;
-}
-.headerbanner{
-	color: #141412;
-	display: block;
-	margin: 0 auto;
-	height: 80px;
-	height: 5rem;
-	padding: 0 20px;
-	padding: 0 1.25rem;
-	text-decoration: none;
-	width: 100%;
-	background: #FFCC00 url('//static/images/header-background80.png') center center no-repeat;
-		background-color: rgb(255, 204, 0);
-		background-image: url("/static/images/header-background80.png");
-		background-repeat: no-repeat;
-		background-attachment: scroll;
-		background-clip: border-box;
-		background-origin: padding-box;
-		background-size: auto auto;
-}
-.bg{
-    font-family:
-	-apple-system, BlinkMacSystemFont,
-	"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-	"Helvetica Neue", sans-serif;
-	
-    font-size: 108px;
-	font-weight: bold;
-	/*line-height: .75;*/
-	margin: 0 auto;
-	width: 100%;
-	justify-content: space-around;
-	text-align: center;
-	text-decoration: none;
 }
 .bg2{
     font-family:
@@ -102,91 +51,6 @@
 	text-align: center;
 	text-decoration: none;
 }
-.bgProfile{
-    font-family:
-	-apple-system, BlinkMacSystemFont,
-	"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-	"Helvetica Neue", sans-serif;
-    font-size: 16px;
-	font-weight: bold;
-
-}
-.bgSubmit{
-    font-family:
-	-apple-system, BlinkMacSystemFont,
-	"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-	"Helvetica Neue", sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 1;
-	text-align: center;
-	text-decoration: none;
-}
-.scroll {
-    background-color: #F8F8F8;
-    width: 500px;
-    height: 500px;
-    overflow: scroll;
-}
-.wrapper {
-  width:860px;
-  margin:0 auto;
-}
-body {
-	background: #C9C9C9;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 1;
-	margin: 0 auto;
-	width: 100%;
-	justify-content: space-around;
-	text-align: center;
-	padding: 120px 0;
-}
-p {
-	color: #898989;
-	line-height: 24px;
-	margin: 0;
-	padding-left: 30px;
-	width: 98%;
-	text-align: left;
-	text-indent: -25px;
-}
-p a {
-	color: #252525;
-	text-decoration: underline;
-}
-p a:hover {
-	color: #FF0000;
-	/*color: #898989;*/
-}
-span {
-	color: #898989;
-	line-height: 24px;
-	margin: 0;
-	padding-left: 10px;
-	width: 98%;
-	text-align: left;
-	text-indent: -25px;
-}
-span a {
-	color: #252525;
-	text-decoration: underline;
-}
-span a:hover {
-	color: #FF0000;
-	/*color: #000000;*/
-}
-spanNotification {
-	color: #898989;
-	line-height: 24px;
-	margin: 0;
-	padding-left: 10px;
-	/*width: 98%;*/
-	text-align: left;
-	/*text-indent: -25px;*/
-}
 .bg4{
     font-family:
 	-apple-system, BlinkMacSystemFont,
@@ -205,12 +69,4 @@ spanNotification {
 }
 .bg4 :hover {
 	color: #FF0000;
-}
-td {
-overflow: hidden;
-max-width: 400px;
-word-wrap: break-word;
-}
-.offcenter20left {
-  margin: auto;
 }
