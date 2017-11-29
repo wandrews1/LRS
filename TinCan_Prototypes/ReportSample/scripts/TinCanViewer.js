@@ -939,7 +939,7 @@ function RenderGolfQuestions (err, result) {
         
     var ctx2 = document.getElementById("myPieChart");
     var myPieChart = new Chart(ctx2, {
-        type: 'doughnut',
+        type: 'pie',
         data: {
             labels: ["Total Correct", "Total Incorrect"],
             datasets: [{

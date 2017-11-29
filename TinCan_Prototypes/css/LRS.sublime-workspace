@@ -146,10 +146,10 @@
 			}
 		},
 		{
-			"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/index.html",
+			"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/index.html",
 			"settings":
 			{
-				"buffer_size": 8055,
+				"buffer_size": 31429,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -207,20 +207,18 @@
 	"expanded_folders":
 	[
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS",
-		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes",
-		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample",
-		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts",
-		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts/TinCanJS"
+		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes"
 	],
 	"file_history":
 	[
+		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/index.html",
+		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/index2.html",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts/TinCanViewer.js",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/JsTetris_TCAPI/TC_tetris.js",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/master",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ButcherExample_TCAPI/index.html",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/GolfExample_TCAPI/tincan.xml",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/GolfExample_TCAPI/scripts/common.js",
-		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/index.html",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/GolfExample_TCAPI/index.html",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ButcherExample_TCAPI/scripts/common.js",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/css/base.css",
@@ -448,7 +446,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -503,27 +501,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 796.0,
+						"translation.y": 756.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/index.html",
+					"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8055,
+						"buffer_size": 31429,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5430,
-								5430
+								17982,
+								17982
 							]
 						],
 						"settings":
@@ -533,10 +531,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1945.0,
+						"translation.y": 7398.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -582,8 +580,8 @@
 						"selection":
 						[
 							[
-								512,
-								512
+								1364,
+								1364
 							]
 						],
 						"settings":
@@ -593,7 +591,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 713.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
