@@ -80,9 +80,11 @@
                             </tr>
                         </table>
                         <div class="container-fluid">
-                            <canvas id="myChart" width="400" height="400" style="position: relative; height:40vh; width:80vw"></canvas>
-                            <canvas id="myChart2" width="400" height="400" style="position: relative; height:40vh; width:80vw"></canvas>
-                            <canvas id="myChart3" width="400" height="400" style="position: relative; height:40vh; width:80vw"></canvas>
+                            <div class="container-fluid">
+                                <canvas id="myChart" width="400" height="400"></canvas>
+                                <canvas id="myChart2" width="400" height="400"></canvas>
+                                <canvas id="myChart3" width="400" height="400"></canvas>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -163,8 +165,8 @@
         </script>
 
         <script>
-        var ctx = document.getElementById("myChart2").getContext('2d');
-        var myChart2 = new Chart(ctx, {
+        var ctx2 = document.getElementById("myChart2").getContext('2d');
+        var myChart2 = new Chart(ctx2, {
             type: 'pie',
             data = {
                 datasets: [{
@@ -181,8 +183,8 @@
         </script>
 
         <script>
-        var ctx = document.getElementById("myChart3").getContext('2d');
-        var myChart3 = new Chart(ctx, {
+        var ctx3 = document.getElementById("myChart3").getContext('2d');
+        var myChart3 = new Chart(ctx3, {
             type: 'radar',
             data: {
                 labels: ['Running', 'Swimming', 'Eating', 'Cycling'],
@@ -195,12 +197,27 @@
                     // Hides the scale
                     display: false
                 }
-            };
+            }
         });
         </script>
 
-
-
+<!--         <script>
+        var myChart3 = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Running', 'Swimming', 'Eating', 'Cycling'],
+                datasets: [{
+                    data: [20, 10, 4, 2]
+                }]
+            }
+            options = {
+                scale: {
+                    // Hides the scale
+                    display: false
+                }
+            }
+        });
+        </script> -->
 
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script src="scripts/jquery-1.8.3.min.js"></script>
