@@ -2,9 +2,6 @@
     background: #ffcc00;
     color: #000000;
 }
-.colored{
-	background-color:#FFCC00;
-}
 .container-fluid{
 	width: 25%;
 	height: 25%;
@@ -72,4 +69,7 @@
 }
 .bg4 :hover {
 	color: #FF0000;
+}
+body {
+	background-color:#FFCC00
 }
