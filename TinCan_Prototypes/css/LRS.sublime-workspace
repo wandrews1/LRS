@@ -140,9 +140,27 @@
 			"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/index.html",
 			"settings":
 			{
-				"buffer_size": 4170,
+				"buffer_size": 2458,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/index.html",
+			"settings":
+			{
+				"buffer_size": 8055,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts/TinCanViewer.js",
+			"settings":
+			{
+				"buffer_size": 36655,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -270,7 +288,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -285,6 +303,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"myChart3",
 			"golf",
 			"refreshGolfData",
 			"butcher",
@@ -411,8 +430,7 @@
 			"8",
 			"5",
 			"8",
-			",",
-			"Register"
+			","
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -430,7 +448,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -458,7 +476,7 @@
 						"translation.y": 2561.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -467,15 +485,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4170,
+						"buffer_size": 2458,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3486,
-								3486
+								2264,
+								2264
 							]
 						],
 						"settings":
@@ -485,14 +503,74 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1617.0,
+						"translation.y": 796.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5430,
+								5430
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1945.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts/TinCanViewer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28610,
+								28610
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 19235.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "styles.css",
 					"semi_transient": false,
 					"settings":
@@ -504,8 +582,8 @@
 						"selection":
 						[
 							[
-								95,
-								95
+								512,
+								512
 							]
 						],
 						"settings":
@@ -518,7 +596,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
