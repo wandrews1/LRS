@@ -140,7 +140,7 @@
 			"file": "/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/index.html",
 			"settings":
 			{
-				"buffer_size": 4167,
+				"buffer_size": 4170,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -190,10 +190,14 @@
 	[
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes",
-		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/css"
+		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample",
+		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts",
+		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts/TinCanJS"
 	],
 	"file_history":
 	[
+		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts/TinCanViewer.js",
+		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/JsTetris_TCAPI/TC_tetris.js",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/master",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ButcherExample_TCAPI/index.html",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/GolfExample_TCAPI/tincan.xml",
@@ -203,7 +207,6 @@
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ButcherExample_TCAPI/scripts/common.js",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/css/base.css",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/css/layout.css",
-		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/scripts/TinCanViewer.js",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/GolfExample_TCAPI/scripts/contentfunctions.js",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/StatementViewer/resources/css/TinCanViewer.css",
 		"/C/Users/willi/Documents/School/UMW/CPSC 448 - Advanced Web Development/website/LRS/TinCan_Prototypes/ReportSample/css/TinCanViewer.css",
@@ -267,7 +270,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -455,7 +458,7 @@
 						"translation.y": 2561.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -464,15 +467,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4167,
+						"buffer_size": 4170,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1934,
-								1934
+								3486,
+								3486
 							]
 						],
 						"settings":
@@ -482,10 +485,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 633.0,
+						"translation.y": 1617.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -578,6 +581,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"C:\\Users\\willi\\Documents\\School\\UMW\\CPSC 415 - Artificial Intelligence\\cpsc415\\wumpus.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
@@ -598,7 +605,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 213.0,
+	"side_bar_width": 289.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
