@@ -861,9 +861,15 @@ function RenderGolfQuestions (err, result) {
     }
     sortedQuestionIds.sort();
 
+    let correctData = []; // This //
+    let incorrectData = []; // This //
+
     for (i = 0; i < sortedQuestionIds.length; i++) {
         questionId = sortedQuestionIds[i];
         results = resultsByQuestion[questionId];
+
+        correctData.push(results["numCorrect"]); // this //
+        incorrectData.push(results["numIncorrect"]); //this//
 
         html = "<tr class='golfQuestion'>";
             html += "<td class='question'>" + results["question"] + "</td>";
@@ -876,7 +882,146 @@ function RenderGolfQuestions (err, result) {
         $("table#golfQuestions").append(html);
     }
 
+        // Set up graph stuff
+        var ctx = document.getElementById("myBarChart");
+        var myBarChart = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ["#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8", "#9", "#10"],
+datasets: [{
+label: '# of correct answers',
+data: correctData,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+    
+    var totalCorrect = 0;
+    var totalIncorrect = 0;
+        
+    for (i = 0; i < correctData.length; i++) {
+        totalCorrect += correctData[i];
+        totalIncorrect += incorrectData[i];
+    }
+        
+    var ctx2 = document.getElementById("myPieChart");
+    var myPieChart = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ["Total Correct", "Total Incorrect"],
+            datasets: [{
+                label: ['Total Correct', 'Total Incorrect'],
+                data: [totalCorrect, totalIncorrect],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    display: this.scalesdisplay,
+                    ticks: {
+                        beginAtZero:this.beginzero,
+                    }
+                }],
+                yAxes: [{
+                    display: this.scalesdisplay,
+                    ticks: {
+                        beginAtZero:this.beginzero,
+                    }
+                }]
+            }
+        }
+    });
+    
+    var ctx3 = document.getElementById("myRadarChart");
+    var myRadarChart = new Chart(ctx3, {
+        type: 'radar',
+        data: {
+            labels: ["#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8", "#9", "#10"],
+            datasets: [{
+                label: '# of incorrect answers',
+                data: incorrectData,
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
 
+
+// -------------------------------------- //
 
 }
 
